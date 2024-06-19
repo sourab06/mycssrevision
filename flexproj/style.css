@@ -1,0 +1,276 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+*
+{
+    padding: 0;
+    margin:0;
+    line-height: 1.5;
+}
+.container{
+    margin: 0  3rem;
+    display:flex;
+    /* border: 5px solid black; */
+    /* justify-content: space-between; */
+    align-items: center;
+ }
+.header-left{
+    display: flex;
+    flex:1;
+    /* border: 5px solid black; */
+}
+.nav{
+    display: flex;
+    flex:1;
+    gap: 1rem;
+    justify-content: center;
+    /* border: 5px solid black; */
+ }
+.headerr1,.headerr2,.headerr3{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    display: flex;
+   justify-content: flex-end;
+    flex:1;
+    gap: 1rem;
+      /* border: 5px solid black; */
+}
+.btns{
+border: none;
+cursor: pointer;
+font-family: inherit;
+color: white;
+background-color: black;
+padding: .25rem  .5rem;
+}
+.icon{
+    display:none;
+}
+
+
+.main_hero{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    text-align: center;
+    
+}
+.hero_title{
+    margin: 0;
+    line-height: 1;
+    /* font-size: 3 rem; */
+    margin-top: 5rem;
+    /* margin-block-end:0; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* border: 5px solid black; */
+}
+.hero_description{
+    text-decoration: none;
+    font-weight: normal;
+    color: grey;
+    font:inherit;
+    line-height: 1;
+    margin-top: -1rem;
+    /* margin-block-start: 0; */
+}
+.btn_hero{
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font:inherit;
+    cursor: pointer;
+    padding: .25rem  .5rem;
+}
+.pricing_header{
+    margin:3rem 3rem -1rem 3rem;
+}
+.pricing_description{
+    margin: 0rem 3rem  1rem 3rem;
+    
+}
+.box_pricing{
+    display:flex;
+    justify-content: center;
+    /* border: 5px solid black; */
+    
+}
+.box{
+    border:2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color:white;
+    margin: 0rem 3rem  1rem 3rem;
+    padding: 2rem;
+    /* font-size: 0.2rem; */
+}
+.list_btn{
+background-color: white;
+color:black;
+text-decoration: none;
+border-radius: 8px;
+display:block;
+/* width:5 rem; */
+margin:1rem;
+text-align:center;
+letter-spacing: .1rem;
+font:inherit;
+}
+.list{
+    margin:1rem;
+    font-weight: normal;
+    color:grey;
+    font:inherit;
+}
+.box_description{
+    color:grey;
+    font:inherit;
+}
+.feature_header{
+    text-align: center;
+    }
+.feature_description{
+        text-align: center;
+        margin:1rem auto 1rem;
+        max-width: 45ch;
+    }
+.features1{
+    display: flex;
+    /* margin: 0 7rem 0; */
+    /* width:70rem; */
+    /* border: 3px solid black; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-content: center; */
+    
+}
+
+.feature_box{
+    border: 2px solid grey;
+    margin:.5rem;
+    width:22rem;
+}
+.contact{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+    margin:3rem auto 0rem;
+    color:grey;
+}
+
+@media (max-width:865px){
+    .box{
+        font-size: 0.55rem;
+    }
+}
+/* meddia query for header section */
+
+@media (max-width:751px) {
+    .nav{
+        display:none;
+    }
+    .box_pricing{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .box{
+        text-align:center;
+        font-size: 1rem;
+        
+    }
+    ul {
+        list-style-type: none;
+      }
+}
+@media (max-width:675px) {
+    .btn{
+        /* display: flex; */
+       justify-content: flex-end;
+        /* flex:1; */
+        gap: 1rem;
+          /* border: 5px solid black; */
+    }
+    .container{
+        margin: 0;
+       
+     }
+    
+    
+}
+@media (max-width:530px){
+    .container{
+       /* display: flex; */
+       justify-content: space-evenly;
+       /* border: 5px solid black; */
+       /* text-align: center; */
+     }
+    .icon{
+        display:flex;
+        /* flex:0 1 auto; */
+        flex:1;
+        justify-content: flex-end;
+        
+    }
+    .btn{
+        display:none;
+    }
+    
+}
+/* media query for hero secction */
+@media (max-width:450px){
+    .header-left{
+        font-size: 0.9rem ;
+    }
+    .hero_title{
+       
+        font-size: 2rem;
+        
+      
+    }
+    .hero_description{
+       
+        font-size: 0.8rem;
+    }
+    .box{
+        font-size: 0.7rem;
+        
+    }
+   
+}
+@media (max-width:360px){
+    .header-left{
+        font-size: 0.85rem ;
+    }
+    .hero_title{
+        margin: 0;
+        line-height: 1;
+        font-size: 1.9rem;
+        margin-top: 5rem;
+        /* margin-block-end:0; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* text-align: center; */
+        /* border: 5px solid black; */
+    }
+    .hero_description{
+       
+        font-size: 0.7rem;
+    }
+    .pricing_header{
+        font-size: 1.2rem;
+    }
+    .box{
+        font-size: 0.55rem;
+        
+    }
+   
+}

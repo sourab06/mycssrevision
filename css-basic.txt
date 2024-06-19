@@ -1,0 +1,323 @@
+you can add style to an element by specifying it 
+in the style element and setting a property for 
+it like this:
+
+element {
+ property: value;
+}
+
+Center your h1 element by setting its 
+text-align property to the value center.
+
+<style>
+      h1,h2,p{
+        text-align:center;
+      }
+    </style>
+
+
+Now you need to link the styles.css file so the 
+styles will be applied again. Nest a self-closing 
+link element in the head element. Give it a rel 
+attribute value stylesheet and an href attribute 
+value of styles.css.
+
+<link rel="stylesheet" href="styles.css" />
+
+For the styling of the page to look similar on 
+mobile as it does on a desktop or laptop, you need 
+to add a meta element with a special content 
+attribute.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+body{
+  background-color:burlywood;
+}
+
+you can use the id selector to target a specific 
+element with an id attribute. An id selector is 
+defined by placing the hash symbol # directly in 
+front of the element's id value. For example, if 
+an element has the id of cat then you would target 
+that element like this:
+
+#cat {
+  width: 250px;
+}
+#menu{
+width:300px; /* width: 80% . 80% of body 
+since #menu is in the body tag*/
+}
+
+ margin-left and margin-right properties to auto. 
+Think of the margin as invisible space around an 
+element. Using these two margin properties, center 
+the #menu element within the body element.
+
+margin-left:auto;
+margin-right:auto;
+
+So far you have been using type and id selectors 
+to style elements. 
+A class selector is defined by a name with a dot directly in front of it, like this:
+
+.class-name {
+  styles
+}
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+To apply the class's styling to the div element, 
+remove the id attribute and add a class attribute 
+to the div element's opening tag. Make sure to set 
+the class value to menu.
+
+<div class="menu">
+
+body {
+  background-image:url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+}
+
+p elements are block-level elements, so they 
+take up the entire width of their parent element.
+To get them on the same line, you need to apply 
+some styling to the p elements so they behave more 
+like inline elements.
+
+.item p{
+  display:inline-block;
+}
+
+inline element vs block element
+padding vs margin
+
+On a very wide screen, the coffee and dessert 
+appear far apart from their prices.
+Add a max-width property to the menu class 
+with a value of 500px to prevent it from growing 
+too wide.
+
+font-family: sans-serif,Impact;
+
+Fallbacks are used in instances where the initial 
+is not found/available.
+
+h1{
+  font-size:40px;
+}
+
+hr {
+  height: 3px;
+  background-color: brown;
+  border-color:brown;
+}
+The default value of a property named border-width 
+is 1px for all edges of hr elements.
+
+
+
+The default color of a link that has not yet been 
+clicked on is typically blue. The default color of 
+a link that has already been visited from a page is 
+typically purple.
+
+To make the footer links the same color regardless 
+if a link has been visited, use a type selector for 
+the anchor element (a) and use the value black for 
+the color property.
+
+
+
+You change properties of a link when the link has 
+actually been visited by using a pseudo-selector 
+that looks like 
+a:visited { propertyName: propertyValue; }.
+
+Change the color of the footer Visit our website 
+link to be grey when a user has visited the link.
+
+You change properties of a link when the mouse 
+hovers over them by using a pseudo-selector that 
+looks like a:hover { propertyName: propertyValue; }.
+
+a:active {
+  color: brown;
+}
+
+<img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
+
+img elements are "like" inline elements.
+
+HTML CODE-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="menu">
+      <main>
+        <h1>CAMPER CAFE</h1>
+        <p class="established">Est. 2020</p>
+        <hr>
+        <section>
+          <h2>Coffee</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/>
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+        <section>
+          <h2>Desserts</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
+        </section>
+      </main>
+      <hr class="bottom-line">
+      <footer>
+        <p>
+          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+        </p>
+        <p class="address">123 Free Code Camp Drive</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+CSS code-
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-25px;
+}
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-25px;
+}
+
+.class1.class2 selects an element that has both classes.
+
+.class1 .class2 selects an element with a class of .class2 that is a child of an element that has a class of .class1.
